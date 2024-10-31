@@ -17,7 +17,6 @@
             <input type='text' name='search' placeholder="fraza">
             <input type='text' name='author' placeholder="author">
             <input type='submit' value='wyszukaj'><br>
-            
             <?php
                 echo "<select name='gameID'><option value=''>Jaka gra?</option>";
                 $sql = "SELECT * from gry ORDER BY nazwa";
