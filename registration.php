@@ -32,7 +32,6 @@
   }
   else {
 ?>
-
 <form class="form" action="" method="post">
   <h1 class="login-title">Rejestracja</h1>
   <input type="text" class="login-input" name="login" placeholder="Login" required/>
