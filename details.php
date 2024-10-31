@@ -58,8 +58,6 @@
           echo "<img id='like' src='img/site/likeFilled.png' data='$currentUser'>";
         }
 
-
-
         $result = $conn->query($sqlKomentarze);
         echo "<hr>
         <div id='modComments'>
@@ -77,7 +75,6 @@
           $i++;
         }
         echo "</div>";
-        
         
       ?>
     </div>
