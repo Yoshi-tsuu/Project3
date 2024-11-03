@@ -6,5 +6,4 @@
  $sql = "INSERT INTO polubienia VALUES ($modID,$userID)";
  $conn->query($sql);
  echo $sql;
-
 ?>
