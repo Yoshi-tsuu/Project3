@@ -8,6 +8,7 @@ $(document).ready(function() {
     e.stopPropagation();
     window.open("details.php?id=" + $(this).attr('data'));
   })
+  
   //HoverEffect
   $("#modlist").on("mouseenter","div",function(){
     $(this).css("background-color","green");
@@ -31,7 +32,6 @@ $(document).ready(function() {
     } else {
       $.post("fun/removeLike.php",{modID:modID,userID:userID},function(data){
         console.log(data);
-        
       })
       $(this).attr("src","img/site/likeEmpty.png")
     }
