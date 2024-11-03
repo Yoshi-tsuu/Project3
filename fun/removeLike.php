@@ -6,5 +6,4 @@
  $sql = "DELETE FROM polubienia WHERE modID = $modID AND userID = $userID";
  $conn->query($sql);
  echo $sql;
-
 ?>
