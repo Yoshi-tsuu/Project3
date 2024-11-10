@@ -27,6 +27,7 @@
             }
 
             echo "</div>";
+
             echo "<div id='controlUsers'>";
 
             $sql = "SELECT id,login,admin from uzytkownicy";

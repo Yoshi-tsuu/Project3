@@ -6,12 +6,12 @@
  $opis = $_POST["opis"];
  $repo = $_POST["repo"];
  $graID = $_POST["gra"];
- if(isset($_FILES["obrazek"])){
+ if(isset($_FILES["obrazek"])&&$_FILES["obrazek"]["name"]!=""){
   $obrazek = basename($_FILES["obrazek"]["name"]);
   $obrazek = str_replace(" ","",$obrazek);
   move_uploaded_file($_FILES["obrazek"]["tmp_name"], "../img/$obrazek");
   $sql = "INSERT INTO mody(ID,graID,nazwa,opis,obrazek,repo,userID) VALUES (NULL,$graID,'$nazwa','$opis','$obrazek','$repo',$autor)";
- }else $sql = "INSERT INTO mody(ID,graID,nazwa,opis,obrazek,repo,userID) VALUES (NULL,$graID,'$nazwa','$opis',NULL,'$repo',$autor)";
+ }else $sql = "INSERT INTO mody(ID,graID,nazwa,opis,repo,userID) VALUES (NULL,$graID,'$nazwa','$opis','$repo',$autor)";
  $conn->query($sql);
 
  header("location: ../mody.php");
